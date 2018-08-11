@@ -4,7 +4,7 @@
 "description": "An AngularJS/Bootstrap starter for Codesandbox",
 "keywords": [],
 "homepage": "https://codesandbox.io/s/new",
-"main": "src/index.js",
+"main": "index.html",
 "dependencies": {
 "angular": "1.7.2",
 "bootstrap": "3.3.7",
