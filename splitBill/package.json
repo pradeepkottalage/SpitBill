@@ -1,0 +1,16 @@
+{
+"name": "angularjs",
+"version": "1.0.0",
+"description": "An AngularJS/Bootstrap starter for Codesandbox",
+"keywords": [],
+"homepage": "https://codesandbox.io/s/new",
+"main": "src/index.js",
+"dependencies": {
+"angular": "1.7.2",
+"bootstrap": "3.3.7",
+"font-awesome": "4.7.0"
+},
+"devDependencies": {
+
+}
+}
