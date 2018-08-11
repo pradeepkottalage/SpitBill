@@ -1,0 +1,26 @@
+<div>
+        <div>
+                <button ng-click="showAddFriend=!showAddFriend">Add New Friend</button>
+              <div ng-if="showAddFriend==true;">
+                    <input type="text" placeholder="Name" ng-model="friend.name">
+ 
+                    <div>
+                  
+                    </div>
+                    <button ng-click="saveFriend(friend)">Save</button>
+                   
+              </div>
+              <div>
+                 
+                      <ol>
+                          <li ng-repeat="data in FriendsAdded track by $index">
+                               {{data.name}} <!--<span>- Amt : {{data.Amt}} -- friends {{data.friends}} </span>-->
+                          </li>
+                      </ol>
+                 
+              </div>
+                
+                
+            </div>
+
+</div>

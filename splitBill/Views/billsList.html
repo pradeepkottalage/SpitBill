@@ -1,0 +1,33 @@
+<div>
+    <div>
+            <button ng-click="showAddBill=!showAddBill">Add New Bill</button>
+    </div>
+
+  <hr/>
+    <div ng-if="showAddBill==true;">
+        
+        <div class="row">
+            <input type="number" placeholder="Amount" ng-model="billModel.billAmount">
+            <input type="textarea" placeholder="Expense Description" ng-model="billModel.billDesc" />  
+            <button ng-click="saveBill(billModel)">Save</button>
+            
+        </div>
+       
+  </div>
+  <div >
+          <ol>
+              <li ng-repeat="data in BillsAdded track by $index">
+                   {{data.Desc}} <span>- Total Amt : <input type="number" ng-model="data.Amt"/><!--<span>- Amt : {{data.Amt}} -- friends {{data.friends}} </span>-->
+                    <button ng-click="saveEdit(data)">save Bill</button>
+                    <select ng-model="selectedName" ng-options="item.name for  item in FriendsAdded"></select>
+                    <button ng-click="linkFriend(data,selectedName)">Link friend</button>
+                    <h3>Linked Friends</h3>
+                    <ul>
+                        <li ng-repeat="friendsdata in data.linkedTo track by $index">{{friendsdata.name}} 's Contribution is - {{data.share}}  </li>
+                    </ul>
+                    <hr/>
+                </li>
+          </ol>
+  </div>
+    
+</div>
